@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_examples_v1/cunsumer.dart';
 
 
 final nameprovider= Provider<String>(
@@ -60,7 +61,8 @@ class MyHomePage extends ConsumerWidget{
 
         children: [
           Text('Hello providers '),
-          Center(child: Text(name),)
+          Center(child: Text(name),),
+          ConsumerExample(),
         ],
       ),
     ),
