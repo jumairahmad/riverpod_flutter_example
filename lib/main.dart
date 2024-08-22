@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_examples_v1/counter_ui.dart';
 import 'package:riverpod_examples_v1/cunsumer.dart';
 
 
@@ -63,6 +64,15 @@ class MyHomePage extends ConsumerWidget{
           Text('Hello providers '),
           Center(child: Text(name),),
           ConsumerExample(),
+    
+
+        TextButton.icon(onPressed: (){
+
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=> CounterUi()),
+          );
+        }, label:const Text('Counter example State notifier'))
+
         ],
       ),
     ),
