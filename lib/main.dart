@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_examples_v1/counter_ui.dart';
 import 'package:riverpod_examples_v1/cunsumer.dart';
+import 'package:riverpod_examples_v1/users_view.dart';
 
 
 final nameprovider= Provider<String>(
@@ -71,7 +72,14 @@ class MyHomePage extends ConsumerWidget{
           Navigator.push(context, 
           MaterialPageRoute(builder: (context)=> CounterUi()),
           );
-        }, label:const Text('Counter example State notifier'))
+        }, label:const Text('Counter example State notifier')),
+
+    TextButton.icon(onPressed: (){
+
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=> UsersView()),
+          );
+        }, label:const Text('Future Provider'))
 
         ],
       ),
