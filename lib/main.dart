@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_examples_v1/counter_ui.dart';
 import 'package:riverpod_examples_v1/cunsumer.dart';
+import 'package:riverpod_examples_v1/streamproviderexample.dart';
 import 'package:riverpod_examples_v1/users_view.dart';
 
 
@@ -79,7 +80,14 @@ class MyHomePage extends ConsumerWidget{
           Navigator.push(context, 
           MaterialPageRoute(builder: (context)=> UsersView()),
           );
-        }, label:const Text('Future Provider'))
+        }, label:const Text('Future Provider')),
+
+          TextButton.icon(onPressed: (){
+
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=> StreamProviderExample()),
+          );
+        }, label:const Text('Stream Provider'))
 
         ],
       ),
