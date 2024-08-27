@@ -10,6 +10,8 @@ final counterProvider=StateNotifierProvider.autoDispose<CounterState,int>(((ref)
 
 //this will mainatin the state alive 
 //ref.keepalive()
+//this will mainatin the state alive 
+//ref.keepalive()
 
 final link=ref.keepAlive();
 final timer =Timer(Duration(seconds: 10), (){
