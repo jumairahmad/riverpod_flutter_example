@@ -6,8 +6,8 @@ import 'package:riverpod_examples_v1/counter_notifier.dart';
 final counterProvider= StateNotifierProvider<CounterNotifier,int>((ref)=>CounterNotifier());
 
 
-class CounterUi extends ConsumerWidget {
-  const CounterUi({super.key});
+class CounterU extends ConsumerWidget {
+  const CounterU({super.key});
 
   @override
   Widget build(BuildContext context,WidgetRef ref) {

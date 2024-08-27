@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_examples_v1/autodispose/counter_ui.dart';
 import 'package:riverpod_examples_v1/counter_ui.dart';
 import 'package:riverpod_examples_v1/cunsumer.dart';
 import 'package:riverpod_examples_v1/streamproviderexample.dart';
@@ -71,7 +72,7 @@ class MyHomePage extends ConsumerWidget{
         TextButton.icon(onPressed: (){
 
           Navigator.push(context, 
-          MaterialPageRoute(builder: (context)=> CounterUi()),
+          MaterialPageRoute(builder: (context)=> CounterU()),
           );
         }, label:const Text('Counter example State notifier')),
 
@@ -87,8 +88,15 @@ class MyHomePage extends ConsumerWidget{
           Navigator.push(context, 
           MaterialPageRoute(builder: (context)=> StreamProviderExample()),
           );
-        }, label:const Text('Stream Provider'))
+        }, label:const Text('Stream Provider')),
 
+
+ TextButton.icon(onPressed: (){
+
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=>CounterUi()),
+          );
+        }, label:const Text('Auto dispose modifiers and time based caching'))
         ],
       ),
     ),
