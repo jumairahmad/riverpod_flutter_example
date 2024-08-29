@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_examples_v1/autodispose/counter_ui.dart';
 import 'package:riverpod_examples_v1/counter_ui.dart';
 import 'package:riverpod_examples_v1/cunsumer.dart';
+import 'package:riverpod_examples_v1/notifier_examples/counter_screen.dart';
 import 'package:riverpod_examples_v1/streamproviderexample.dart';
 import 'package:riverpod_examples_v1/users_view.dart';
 
@@ -86,7 +87,15 @@ class MyHomePage extends ConsumerWidget{
           Navigator.push(context, 
           MaterialPageRoute(builder: (context)=>CounterUi()),
           );
-        }, label:const Text('Auto dispose modifiers and time based caching'))
+        }, label:const Text('Auto dispose modifiers and time based caching')),
+      
+      TextButton.icon(onPressed: (){
+
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=>CounterNotifierView()),
+          );
+        }, label:const Text('Counter Notifier Provider')),
+      
         ],
       ),
     ),
