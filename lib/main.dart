@@ -4,6 +4,7 @@ import 'package:riverpod_examples_v1/autodispose/counter_ui.dart';
 import 'package:riverpod_examples_v1/counter_ui.dart';
 import 'package:riverpod_examples_v1/cunsumer.dart';
 import 'package:riverpod_examples_v1/notifier_examples/counter_screen.dart';
+import 'package:riverpod_examples_v1/searching/searching_ui.dart';
 import 'package:riverpod_examples_v1/streamproviderexample.dart';
 import 'package:riverpod_examples_v1/users_view.dart';
 
@@ -96,6 +97,13 @@ class MyHomePage extends ConsumerWidget{
           );
         }, label:const Text('Counter Notifier Provider')),
       
+
+        TextButton.icon(onPressed: (){
+
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=>SearchUI()),
+          );
+        }, label:const Text('Filter with riverpod')),
         ],
       ),
     ),
